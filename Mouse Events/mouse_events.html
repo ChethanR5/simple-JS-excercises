@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .b1{
+                background-color: red;
+                padding: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+   
+    <body>
+        1. <button  id="button1" class="b1" onmouseover="changeColor('button1','orange')" >
+           Mouse_Over
+        </button>
+       2. <button id="button2" class="b1" onmouseover="changeColor('button2','blue')" onmouseout="restoreColor('button2','red')">
+            Mouse_out
+        </button>
+        3. <button id="button3" class="b1"  onclick="myFunction('button3', 'yellow')">
+        On_Click
+        </button>
+       4. <button id="button4" class="b1" ondblclick="changeColor('button4','skyblue')">
+         Double_click
+        </button>
+        <br>
+        <br>
+       5. ON_FOCUS : <input type="text"  id="t1" placeholder="On_Focus"  onfocus="myFunction1('t1')">
+        <br>
+        <br>
+       6. ON_BLUR : <input type="text" id="t2" placeholder="on_blur" onblur="myFunction2()">
+
+    
+    <script>
+         function changeColor(buttonId, color) {
+        document.getElementById(buttonId).style.backgroundColor = color;
+    }
+
+    function restoreColor(buttonId, color) {
+        document.getElementById(buttonId).style.backgroundColor = color;
+    }
+       function myFunction(buttonId, color) {
+      document.getElementById('button3').style.background=color    }
+
+    function myFunction1(id) {
+  document.getElementById(id).style.background='yellow'
+}
+function myFunction2(){
+ let x= document.getElementById('t2');
+ x.value=x.value.toUpperCase();
+}
+    </script>
+    </body>
+</html>
